@@ -1,147 +1,73 @@
+BINGECART E-COMMERCE APP
+=========================
 
-# Bingecart E-commerce App
+Description:
+------------
+Bingecart is a full-stack e-commerce web application built using the MERN stack (MongoDB, Express, React, Node.js) with Python (Flask) backend integration. The app is inspired by platforms like Flipkart and Amazon, offering a sleek, Netflix-themed UI. It includes features like product listing, user authentication, shopping cart, and an admin panel for product management.
 
-Bingecart is a full-stack e-commerce web application inspired by platforms like Flipkart and Amazon. It features a seamless shopping experience with user authentication, an admin dashboard for product management, shopping cart functionality, and personalized product recommendations using a content-based machine learning model.
+Key Features:
+-------------
+1. User Registration and Login (with JWT authentication)
+2. Product Catalog with Categories
+3. Product Detail Page
+4. "Add to Cart" functionality
+5. Cart Page with Quantity and Price Management
+6. Admin Panel for Adding/Deleting/Managing Products
+7. Responsive Netflix-inspired UI (using React + Bootstrap)
+8. Python Flask Backend with MongoDB Database
+9. CORS and REST API setup
 
----
+Tech Stack:
+-----------
+Frontend: React.js, Bootstrap  
+Backend: Python Flask  
+Database: MongoDB  
+Authentication: JWT  
 
-## 🚀 Features
+How to Run:
+-----------
+1. Clone this repository:
+   git clone https://github.com/aaryan21bansal/Bingecart_ecommerce_app.git
 
-- 🔐 User Authentication & Authorization (JWT-based)
-- 🛍️ Product Catalog with detailed Product Pages
-- 🛒 Shopping Cart with Add/Remove functionality
-- 📦 Admin Dashboard for product management (Add/Edit/Delete)
-- 🤖 Content-Based Product Recommendation System
-- 🎯 Personalized "Recommended For You" products (using localStorage)
-- 💻 Responsive Netflix-style UI with Bootstrap 5 styling
-- 🔧 Flask API backend with MongoDB
+2. Install dependencies for Backend:
+   cd backend
+   pip install -r requirements.txt
 
----
+3. Install dependencies for Frontend:
+   cd frontend
+   npm install
 
-## 🏗️ Tech Stack
+4. Start Backend Server:
+   python app.py
 
-| Frontend | Backend | Database | Machine Learning | Styling |
-|---------|---------|----------|-----------------|---------|
-| React.js | Flask (Python) | MongoDB | TF-IDF & Cosine Similarity | Bootstrap 5 |
+5. Start Frontend Server:
+   cd frontend
+   npm start
 
----
+6. Open browser at:
+   http://localhost:3000
 
-## 📂 Project Structure
+Project Structure:
+------------------
+/backend     - Flask backend API (Python)
+/frontend    - React frontend (with Bootstrap styling)
+/README.txt  - Project Documentation
 
-```
-Bingecart_ecommerce_app/
-│
-├── backend/                # Flask Backend
-│   ├── app.py              # Main application file
-│   ├── models.py           # DB models
-│   ├── routes.py           # API routes
-│   ├── recommendation.py   # ML-based Recommendation engine
-│   ├── .env                # Environment variables (not tracked)
-│   └── venv/               # Python virtual environment (ignored)
-│
-├── frontend/               # React Frontend
-│   ├── public/
-│   ├── src/
-│   │   ├── components/     # Navbar, ProductCard, Cart, etc.
-│   │   ├── pages/          # Home, Product Detail, Checkout pages
-│   │   ├── App.js
-│   │   └── index.js
-│   ├── package.json
-│   └── node_modules/       # Ignored in Git
-│
-└── README.md               # Project documentation
-```
+Important Notes:
+----------------
+- MongoDB must be running locally or replace the connection string in the backend code.
+- Admin user needs "is_admin: true" in MongoDB users collection to access admin features.
 
----
+Future Improvements:
+--------------------
+- Payment Gateway Integration
+- Order Tracking System
+- Product Review and Rating System
 
-## ⚙️ Installation & Setup
+Contributors:
+-------------
+Aaryan Bansal
 
-### Backend Setup:
-
-1. **Navigate to backend:**
-
-```bash
-cd backend
-```
-
-2. **Create and activate virtual environment:**
-
-```bash
-python -m venv venv
-venv\Scripts\activate  # For Windows
-```
-
-3. **Install Python dependencies:**
-
-```bash
-pip install -r requirements.txt
-```
-
-4. **Start Flask server:**
-
-```bash
-python app.py
-```
-
----
-
-### Frontend Setup:
-
-1. **Navigate to frontend:**
-
-```bash
-cd frontend
-```
-
-2. **Install Node.js dependencies:**
-
-```bash
-npm install
-```
-
-3. **Start React app:**
-
-```bash
-npm start
-```
-
----
-
-## 🤖 Machine Learning Recommendation
-
-- Uses **TF-IDF Vectorizer and Cosine Similarity** to recommend similar products.
-- Content-based filtering displayed on product detail pages.
-- Personalized recommendations ("Recommended For You") based on user cart/browsing history via **localStorage** on homepage.
-
----
-
-## 🔐 Authentication & Roles
-
-- **JWT-based user login & registration**
-- **Admin routes** for product management (accessible only to admins)
-- **Protected routes** like checkout & order history
-
----
-
-## 📜 .gitignore Highlights
-
-```
-/backend/venv
-/backend/__pycache__/
-/backend/.env
-/frontend/node_modules
-.DS_Store
-```
-
----
-
-## 📝 License
-
-MIT License
-
----
-
-## 🙋‍♂️ Author
-
-**Aaryan Bansal**  
-[GitHub](https://github.com/aaryan21bansal)
+Repository Link:
+----------------
+https://github.com/aaryan21bansal/Bingecart_ecommerce_app
