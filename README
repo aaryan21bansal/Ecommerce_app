@@ -1,0 +1,147 @@
+
+# Bingecart E-commerce App
+
+Bingecart is a full-stack e-commerce web application inspired by platforms like Flipkart and Amazon. It features a seamless shopping experience with user authentication, an admin dashboard for product management, shopping cart functionality, and personalized product recommendations using a content-based machine learning model.
+
+---
+
+## 🚀 Features
+
+- 🔐 User Authentication & Authorization (JWT-based)
+- 🛍️ Product Catalog with detailed Product Pages
+- 🛒 Shopping Cart with Add/Remove functionality
+- 📦 Admin Dashboard for product management (Add/Edit/Delete)
+- 🤖 Content-Based Product Recommendation System
+- 🎯 Personalized "Recommended For You" products (using localStorage)
+- 💻 Responsive Netflix-style UI with Bootstrap 5 styling
+- 🔧 Flask API backend with MongoDB
+
+---
+
+## 🏗️ Tech Stack
+
+| Frontend | Backend | Database | Machine Learning | Styling |
+|---------|---------|----------|-----------------|---------|
+| React.js | Flask (Python) | MongoDB | TF-IDF & Cosine Similarity | Bootstrap 5 |
+
+---
+
+## 📂 Project Structure
+
+```
+Bingecart_ecommerce_app/
+│
+├── backend/                # Flask Backend
+│   ├── app.py              # Main application file
+│   ├── models.py           # DB models
+│   ├── routes.py           # API routes
+│   ├── recommendation.py   # ML-based Recommendation engine
+│   ├── .env                # Environment variables (not tracked)
+│   └── venv/               # Python virtual environment (ignored)
+│
+├── frontend/               # React Frontend
+│   ├── public/
+│   ├── src/
+│   │   ├── components/     # Navbar, ProductCard, Cart, etc.
+│   │   ├── pages/          # Home, Product Detail, Checkout pages
+│   │   ├── App.js
+│   │   └── index.js
+│   ├── package.json
+│   └── node_modules/       # Ignored in Git
+│
+└── README.md               # Project documentation
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### Backend Setup:
+
+1. **Navigate to backend:**
+
+```bash
+cd backend
+```
+
+2. **Create and activate virtual environment:**
+
+```bash
+python -m venv venv
+venv\Scripts\activate  # For Windows
+```
+
+3. **Install Python dependencies:**
+
+```bash
+pip install -r requirements.txt
+```
+
+4. **Start Flask server:**
+
+```bash
+python app.py
+```
+
+---
+
+### Frontend Setup:
+
+1. **Navigate to frontend:**
+
+```bash
+cd frontend
+```
+
+2. **Install Node.js dependencies:**
+
+```bash
+npm install
+```
+
+3. **Start React app:**
+
+```bash
+npm start
+```
+
+---
+
+## 🤖 Machine Learning Recommendation
+
+- Uses **TF-IDF Vectorizer and Cosine Similarity** to recommend similar products.
+- Content-based filtering displayed on product detail pages.
+- Personalized recommendations ("Recommended For You") based on user cart/browsing history via **localStorage** on homepage.
+
+---
+
+## 🔐 Authentication & Roles
+
+- **JWT-based user login & registration**
+- **Admin routes** for product management (accessible only to admins)
+- **Protected routes** like checkout & order history
+
+---
+
+## 📜 .gitignore Highlights
+
+```
+/backend/venv
+/backend/__pycache__/
+/backend/.env
+/frontend/node_modules
+.DS_Store
+```
+
+---
+
+## 📝 License
+
+MIT License
+
+---
+
+## 🙋‍♂️ Author
+
+**Aaryan Bansal**  
+[GitHub](https://github.com/aaryan21bansal)
